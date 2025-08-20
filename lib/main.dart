@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:prueba1/view/counter_view.dart';
 import 'package:provider/provider.dart';
 import 'package:prueba1/viewmodel/counter_viewmodel.dart';
+import 'package:prueba1/view/screen/main_screen.dart';
 
 void main() {
   runApp(
@@ -17,6 +18,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(home: CounterView());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(useMaterial3: true),
+      home: MainScreen(),
+    );
   }
 }
